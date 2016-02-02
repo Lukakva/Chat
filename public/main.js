@@ -64,14 +64,14 @@ function recreateChatFromHistory() {
 function createUserTyping(username) {
 	var node = document.createElement("div");
 	node.classList.add("user-typing");
-	node.classList.add(username);
+	node.setAttribute("data-username", username);
 	node.innerHTML = username + " is typing...";
 
 	usersTyping.appendChild(node);
 }
 
 function removeUserTyping(username) {
-	var userTyping = document.querySelector(".user-typing." + username);
+	var userTyping = document.querySelector(".user-typing[data-username='" + username + "']");
 	usersTyping.removeChild(userTyping);
 }
 
