@@ -27,7 +27,7 @@ Download the folder using ``git clone https://github.com/Lukakva/Chat`` command 
 |----------| -------------------------------------------------------------------------------------------------------------------------------------------------------|
 |    :)    |  ![smile emoticon    ](https://raw.githubusercontent.com/Lukakva/Chat/master/public/resources/emoticons/cool.png      "Smile Emoticon")                |
 |    :(    |  ![frown emoticon    ](https://raw.githubusercontent.com/Lukakva/Chat/master/public/resources/emoticons/frown.png     "Frown Emoticon")                |
-|    :|    |  ![pokerface emoticon](https://raw.githubusercontent.com/Lukakva/Chat/master/public/resources/emoticons/pokerface.png "Pokerface Emoticon")            |
+|   :\|    |  ![pokerface emoticon](https://raw.githubusercontent.com/Lukakva/Chat/master/public/resources/emoticons/pokerface.png "Pokerface Emoticon")            |
 |  :/ :\   |  ![unsure emoticon   ](https://raw.githubusercontent.com/Lukakva/Chat/master/public/resources/emoticons/unsure.png    "Unsure Emoticon")               |
 |    ;)    |  ![wink emoticon     ](https://raw.githubusercontent.com/Lukakva/Chat/master/public/resources/emoticons/wink.png      "Wink Emoticon")                 |
 |   :'(    |  ![tear emoticon     ](https://raw.githubusercontent.com/Lukakva/Chat/master/public/resources/emoticons/tear.png      "Tear Emoticon")                 |
