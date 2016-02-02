@@ -1,0 +1,9 @@
+.emoticon {
+	height: 16px;
+	width: 16px;
+	display: inline-block;
+	background-size: 100%;
+	background-position: 0 0;
+	font-size: 0;
+	margin-bottom: -4px;
+}

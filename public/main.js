@@ -1,4 +1,9 @@
 // chat section
+
+RegExp.escape = function(text) {
+	return text.replace(/[-[\]{}()*+?.,\\^$|#\s]/g, "\\$&");
+}
+
 function sendMessage() {
 	var message = chatInput.value;
 	if (message != "") {
@@ -14,6 +19,9 @@ function sendMessage() {
 
 function createMessageNode(from, message, currentUser) {
 	var node = document.createElement("div");
+
+	message = message.replace(/</g, "&lt;").replace(/>/g, "&gt;");
+
 	node.innerHTML =
 	'<div class="chat-message-container">' +
 		'<div class="chat-message-info">' +
@@ -26,6 +34,31 @@ function createMessageNode(from, message, currentUser) {
 
 	if (currentUser === from) {
 		node.querySelector(".chat-message-from").classList.add("current-user");
+	}
+
+	var emoticons = {
+		":)"   : "smile",
+		":("   : "frown",
+		":|"   : "pokerface",
+		":/"   : "unsure",
+		":\\"  : "unsure",
+		";)"   : "wink",
+		":'("  : "tear",
+		";-;"  : "cry",
+		":D"   : "laugh",
+		"^_^"  : "happy",
+		"8|"   : "cool"
+	};
+
+	var emoticonsPath = "resources/emoticons/";
+
+	var message = node.querySelector(".chat-message");
+
+	for (var emoticon in emoticons) {
+		var emoticonPath = emoticonsPath + emoticons[emoticon] + ".png";
+		var emoticonHTML = '<div class="emoticon" style="background-image: url(\'' + emoticonPath + '\');"></div>';
+
+		message.innerHTML = message.innerHTML.replace(new RegExp(RegExp.escape(emoticon), "g"), emoticonHTML);
 	}
 
 	chatWindow.appendChild(node.children[0]);
