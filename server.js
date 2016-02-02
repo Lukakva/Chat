@@ -23,7 +23,7 @@ io.on("connection", function(socket) {
 	socket.on("message", function(message) {
 		// on new message request, if username is not logged in, throw an error
 		if (!socket.username) {
-			return socket.emit("error", {
+			return socket.emit("err", {
 				message: "You have to be logged in to send messages"
 			});
 		}
@@ -54,7 +54,9 @@ io.on("connection", function(socket) {
 	socket.on("login", function(username) {
 		// if that username is already logged in, throw an error
 		if (usernames.indexOf(username) !== -1) {
-			return socket.emit("alreadyLoggedIn");
+			return socket.emit("err", {
+				message: "That username is already logged in"
+			});
 		}
 
 		// otherwise add current username to array

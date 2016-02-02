@@ -142,7 +142,7 @@ sendButton.addEventListener("touchend", sendMessage);
 		createMessageNode(data.from, data.message, username);
 	});
 
-	socket.on("alreadyLoggedIn", function() {
+	socket.on("err", function() {
 		username = window.prompt("Username " + username + " is already logged in. Please try another username");
 		socket.emit("login", username);
 	});
