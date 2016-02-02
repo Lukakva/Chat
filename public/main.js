@@ -81,7 +81,11 @@ var chatInput = document.querySelector(".chat-input");
 var chatWindow = document.querySelector(".chat-window");
 var chatHistory = [];
 var usersTyping = document.querySelector(".users-typing");
-var username = window.prompt("Enter your username");
+var username;
+
+while (!username) {
+	username = window.prompt("Enter your username");
+}
 
 // don't send "User is typing" to server on every input
 var sentIsTyping = false;

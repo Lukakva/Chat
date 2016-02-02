@@ -59,6 +59,12 @@ io.on("connection", function(socket) {
 			});
 		}
 
+		if (!username) {
+			return socket.emit("err", {
+				message: "That username is invalid"
+			});
+		}
+
 		// otherwise add current username to array
 		usernames.push(username);
 
