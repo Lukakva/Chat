@@ -103,10 +103,11 @@ body {
 	position: absolute;
 	bottom: 12.5%;
 	left: auto;
-	right: 0;
+	left: 0;
 	width: 100%;
 	color: rgba(255, 255, 255, 0.8);
 	font-size: 14px;
+	text-align: right;
 }
 
 .user-typing {
