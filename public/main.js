@@ -144,6 +144,7 @@ sendButton.addEventListener("touchend", sendMessage);
 
 	socket.on("message", function(data) {
 		createMessageNode(data.from, data.message, username);
+		new Audio("sound.mp3").play();
 	});
 
 	socket.on("err", function() {
